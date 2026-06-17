@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.png" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rapoarte</title>
+<meta name="description" content="Cercetări de piață și rapoarte analitice.">
+<link rel="canonical" href="https://localdatainsights.ro/ro/reports/">
+<meta property="og:title" content="Rapoarte">
+<meta property="og:description" content="Cercetări de piață și rapoarte analitice.">
+<meta property="og:url" content="https://localdatainsights.ro/ro/reports/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rapoarte">
+<meta name="twitter:description" content="Cercetări de piață și rapoarte analitice.">
+<link rel="alternate" hreflang="en" href="/en/reports/">
+<link rel="alternate" hreflang="ro" href="/ro/reports/">
+<link rel="alternate" hreflang="x-default" href="/">
+
+<link rel="stylesheet" href="/assets/styles.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78HQFLFDBY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-78HQFLFDBY');
+</script>
+
+</head>
+<body class="product-page page-reports">
+<header class="site-header" data-render-section="header">
+  <a class="logo" href="../index.html" aria-label="Local Data Insights">
+    <img src="/assets/logo.png" alt="" class="logo-icon">
+    <span>Local Data Insights</span>
+  </a>
+  <nav class="site-nav" aria-label="Navigatie principala">
+    <a href="../index.html">Acasă</a>
+    <a href="../markets/index.html">Piețe</a>
+    <a href="../datasets/index.html">Seturi de date</a>
+    <a href="index.html" aria-current="page">Rapoarte</a>
+    <a href="../methodology/index.html">Metodologie</a>
+    <a href="../contact/index.html">Contact</a>
+    <a href="../../en/reports/index.html">EN</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" data-block-type="hero">
+  <p class="hero-label">Rapoarte</p>
+  <h1>Cercetări de piață și rapoarte analitice</h1>
+  <p class="hero-subtitle">Înțelege piețele locale prin cercetări publicate, observații de piață și concluzii analitice.</p>
+</section>
+
+<section class="section generic-block" data-block-type="report_library"><h2>Rapoarte disponibile</h2><div class="dataset-filter-controls" data-report-filters><label class="dataset-filter-control"><span>Piață</span><select data-filter-key="market"><option value="">Toate</option><option value="Centre de fitness">Centre de fitness</option></select></label>
+<label class="dataset-filter-control"><span>Geografie</span><select data-filter-key="geography"><option value="">Toate</option><option value="București">București</option></select></label>
+<label class="dataset-filter-control"><span>Data snapshotului</span><select data-filter-key="snapshot_date"><option value="">Toate</option><option value="Mai 2026">Mai 2026</option></select></label></div><div class="report-library"><article class="report-card" data-market="Centre de fitness" data-geography="București" data-snapshot_date="Mai 2026" data-report_type="market_snapshot"><div class="report-card-content"><h3>Fitness Market Snapshot în București</h3><p class="report-card-meta">București · Mai 2026</p><div class="report-card-stat"><span>Profiluri observate</span><strong>365</strong></div><p class="report-card-summary">Raport de tip market snapshot despre vizibilitatea pe Google Business, website-uri, programe de lucru, recenzii, ratinguri, categorii observate și companiile cu cea mai mare vizibilitate din segmentul fitness din București.</p><div class="report-card-actions"><a class="button" href="fitness-centers/romania/bucuresti/market-snapshot/2026-05/index.html">Detalii raport</a>
+<a class="button button-secondary" href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/0c42845b-8aa8-4fc0-ab1d-2c5654730137">Cumpără raportul</a></div></div><figure class="report-card-preview"><picture><source media="(max-width: 640px)" srcset="/assets/report_previews/fitness_centers/bucuresti/40_reviews_distribution_mobile.png"><img src="/assets/report_previews/fitness_centers/bucuresti/40_reviews_distribution.png" alt="Distribuția profilurilor de fitness din București după numărul de recenzii Google" loading="lazy" decoding="async"></picture><figcaption class="report-card-caption">Distribuția profilurilor observate este concentrată în intervalul 101–500 de recenzii, în timp ce segmentele cu volume foarte ridicate apar semnificativ mai rar.</figcaption></figure></article></div></section>
+</main>
+<footer class="site-footer" data-render-section="footer">
+  <nav class="footer-nav" aria-label="Footer">
+    <a href="https://localdatainsights-store.lemonsqueezy.com/" rel="noopener">Magazin</a>
+    <a href="../contact/index.html">Contact</a>
+    <a href="../license/index.html">Licență</a>
+    <a href="../index.html">Pagina principală</a>
+  </nav>
+  <nav class="footer-social" aria-label="Social links">
+    <a href="https://www.linkedin.com/company/local-data-insights" rel="noopener">LinkedIn</a>
+    <a href="https://t.me/localdatainsights" rel="noopener">Telegram</a>
+  </nav>
+</footer>
+
+<script>
+(function () {
+  var filterRoot = document.querySelector("[data-report-filters]");
+  var cards = document.querySelectorAll('section[data-block-type="report_library"] .report-card');
+  if (!filterRoot || !cards.length) {
+    return;
+  }
+
+  var selects = filterRoot.querySelectorAll("select[data-filter-key]");
+  function cardValue(card, key) {
+    return card.getAttribute("data-" + key) || "";
+  }
+
+  function applyFilters() {
+    var active = {};
+    selects.forEach(function (select) {
+      active[select.dataset.filterKey] = select.value || "";
+    });
+
+    cards.forEach(function (card) {
+      var visible = true;
+      Object.keys(active).forEach(function (key) {
+        if (active[key] && cardValue(card, key) !== active[key]) {
+          visible = false;
+        }
+      });
+      card.hidden = !visible;
+    });
+  }
+
+  selects.forEach(function (select) {
+    select.addEventListener("change", applyFilters);
+  });
+})();
+</script>
+</body>
+</html>
