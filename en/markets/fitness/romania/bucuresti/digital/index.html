@@ -31,11 +31,12 @@
 </head>
 <body class="product-page page-l3_digital_coverage">
 <header class="site-header" data-render-section="header">
+  <button class="site-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
   <a class="logo" href="../../../../../index.html" aria-label="Local Data Insights">
     <img src="/assets/logo.png" alt="" class="logo-icon">
     <span>Local Data Insights</span>
   </a>
-  <nav class="site-nav" aria-label="Primary navigation">
+  <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
     <a href="../../../../../index.html">Home</a>
     <a href="../../../../index.html">Markets</a>
     <a href="../../../../../datasets/index.html" aria-current="page">Datasets</a>
@@ -53,16 +54,16 @@
   <p class="hero-subtitle">This overview shows the digital presence of fitness centers in Bucharest as observed in the May 2026 dataset snapshot. It highlights website availability, contact signals and detected social profiles to help users understand how businesses are represented online.</p>
 </section>
 
-<section class="section generic-block" data-block-type="dataset_snapshot"><h2>Dataset Snapshot</h2><dl class="metric-grid"><div class="metric-item"><dt>Records</dt><dd>365</dd></div>
+<section class="section generic-block" data-block-type="dataset_snapshot"><h2>Dataset Snapshot</h2><dl class="metric-grid"><div class="metric-item"><dt>Records</dt><dd>353</dd></div>
 <div class="metric-item"><dt>Snapshot</dt><dd>May 2026</dd></div>
 <div class="metric-item"><dt>Geography</dt><dd>Bucharest</dd></div></dl></section>
-<section class="section generic-block" data-block-type="digital_coverage_metrics"><h2>Digital Coverage Metrics</h2><div class="metric-list"><div class="metric-list-row"><span class="metric-list-label">Website</span><span class="metric-list-value">65.48%</span><span class="metric-list-count">239 detected</span></div>
-<div class="metric-list-row"><span class="metric-list-label">Email</span><span class="metric-list-value">42.47%</span><span class="metric-list-count">155 detected</span></div>
-<div class="metric-list-row"><span class="metric-list-label">Facebook</span><span class="metric-list-value">47.95%</span><span class="metric-list-count">175 detected</span></div>
-<div class="metric-list-row"><span class="metric-list-label">Instagram</span><span class="metric-list-value">43.56%</span><span class="metric-list-count">159 detected</span></div>
-<div class="metric-list-row"><span class="metric-list-label">YouTube</span><span class="metric-list-value">27.67%</span><span class="metric-list-count">101 detected</span></div>
-<div class="metric-list-row"><span class="metric-list-label">WhatsApp</span><span class="metric-list-value">4.93%</span><span class="metric-list-count">18 detected</span></div>
-<div class="metric-list-row"><span class="metric-list-label">TikTok</span><span class="metric-list-value">16.16%</span><span class="metric-list-count">59 detected</span></div></div><p class="metric-note">Counts show detected signals, not unique accounts. One website or social profile may appear for multiple branches.</p></section>
+<section class="section generic-block" data-block-type="digital_coverage_metrics"><h2>Digital Coverage Metrics</h2><div class="metric-list"><div class="metric-list-row"><span class="metric-list-label">Website</span><span class="metric-list-value">65.44%</span><span class="metric-list-count">231 detected</span></div>
+<div class="metric-list-row"><span class="metric-list-label">Email</span><span class="metric-list-value">42.21%</span><span class="metric-list-count">149 detected</span></div>
+<div class="metric-list-row"><span class="metric-list-label">Facebook</span><span class="metric-list-value">47.88%</span><span class="metric-list-count">169 detected</span></div>
+<div class="metric-list-row"><span class="metric-list-label">Instagram</span><span class="metric-list-value">44.48%</span><span class="metric-list-count">157 detected</span></div>
+<div class="metric-list-row"><span class="metric-list-label">YouTube</span><span class="metric-list-value">28.33%</span><span class="metric-list-count">100 detected</span></div>
+<div class="metric-list-row"><span class="metric-list-label">WhatsApp</span><span class="metric-list-value">5.1%</span><span class="metric-list-count">18 detected</span></div>
+<div class="metric-list-row"><span class="metric-list-label">TikTok</span><span class="metric-list-value">16.71%</span><span class="metric-list-count">59 detected</span></div></div><p class="metric-note">Counts show detected signals, not unique accounts. One website or social profile may appear for multiple branches.</p></section>
 <section class="section generic-block" data-block-type="detected_digital_profiles"><h2>Detected Digital Profiles</h2><p>Examples of businesses with digital profiles detected in the current dataset snapshot.</p><div class="digital-profile-list"><article class="digital-profile-item"><h3>Stay Fit Gym Liberty</h3><div class="digital-profile-address">Strada Progresului 151-171, București</div><div class="digital-profile-signals"><a href="https://stayfit.ro/bucuresti/liberty/" rel="noopener">Website</a> · <a href="https://www.facebook.com/StayFitGym" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/stayfitgym_ro" rel="noopener">Instagram</a></div></article>
 <article class="digital-profile-item"><h3>Downtown Fitness Mihalache</h3><div class="digital-profile-address">Bulevardul Ion Mihalache 60, București</div><div class="digital-profile-signals"><a href="https://www.downtownfitness.ro/" rel="noopener">Website</a> · <a href="https://www.facebook.com/DownTownBucuresti" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/downtownfitness.ro" rel="noopener">Instagram</a></div></article>
 <article class="digital-profile-item"><h3>Pure Shapes Unirii</h3><div class="digital-profile-address">Bulevardul Unirii nr. 57, Bl. E4, sc. 4, et. 1, ap. 92, București</div><div class="digital-profile-signals"><a href="https://pureshapes.ro/" rel="noopener">Website</a> · <a href="https://www.facebook.com/pureshapes" rel="noopener">Facebook</a> · <a href="https://instagram.com/pureshapes.ro" rel="noopener">Instagram</a></div></article>
@@ -91,6 +92,19 @@
   </nav>
 </footer>
 
+<script>
+(function () {
+  var header = document.querySelector(".site-header");
+  var toggle = document.querySelector(".site-nav-toggle");
+  if (!header || !toggle) {
+    return;
+  }
 
+  toggle.addEventListener("click", function () {
+    var isOpen = header.classList.toggle("is-nav-open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+})();
+</script>
 </body>
 </html>

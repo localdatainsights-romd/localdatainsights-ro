@@ -31,11 +31,12 @@
 </head>
 <body class="product-page page-reports">
 <header class="site-header" data-render-section="header">
+  <button class="site-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
   <a class="logo" href="../index.html" aria-label="Local Data Insights">
     <img src="/assets/logo.png" alt="" class="logo-icon">
     <span>Local Data Insights</span>
   </a>
-  <nav class="site-nav" aria-label="Primary navigation">
+  <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
     <a href="../index.html">Home</a>
     <a href="../markets/index.html">Markets</a>
     <a href="../datasets/index.html">Datasets</a>
@@ -55,7 +56,8 @@
 
 <section class="section generic-block" data-block-type="report_library"><h2>Available Reports</h2><div class="dataset-filter-controls" data-report-filters><label class="dataset-filter-control"><span>Market</span><select data-filter-key="market"><option value="">All</option><option value="Fitness Centers">Fitness Centers</option></select></label>
 <label class="dataset-filter-control"><span>Geography</span><select data-filter-key="geography"><option value="">All</option><option value="Bucharest">Bucharest</option></select></label>
-<label class="dataset-filter-control"><span>Snapshot Date</span><select data-filter-key="snapshot_date"><option value="">All</option><option value="May 2026">May 2026</option></select></label></div><div class="report-library"><article class="report-card" data-market="Fitness Centers" data-geography="Bucharest" data-snapshot_date="May 2026" data-report_type="market_snapshot"><div class="report-card-content"><h3>Fitness Market Snapshot in Bucharest</h3><p class="report-card-meta">Bucharest · May 2026</p><div class="report-card-stat"><span>Profiles Observed</span><strong>365</strong></div><p class="report-card-summary">A market snapshot report covering Google Business visibility, profile completeness, websites, reviews, ratings, observed categories, geographic coverage, and visibility benchmarks across fitness centers in Bucharest.</p><div class="report-card-actions"><a class="button" href="fitness-centers/romania/bucuresti/market-snapshot/2026-05/index.html">Report Details</a>
+<label class="dataset-filter-control"><span>Snapshot Date</span><select data-filter-key="snapshot_date"><option value="">All</option><option value="May 2026">May 2026</option></select></label></div><div class="report-library"><article class="report-card" data-market="Fitness Centers" data-geography="Bucharest" data-snapshot_date="May 2026" data-report_type="market_snapshot"><div class="report-card-content"><h3>Fitness Market Snapshot in Bucharest</h3><p class="report-card-meta">Bucharest · May 2026</p><div class="report-card-stat"><span>Profiles Observed</span><strong>353</strong></div><p class="report-card-summary">A market snapshot report covering Google Business visibility, websites, working hours, reviews and ratings.
+Includes review distribution, digital coverage, observed categories and examples of highly visible fitness centers in Bucharest.</p><div class="report-card-actions"><a class="button" href="fitness-centers/romania/bucuresti/market-snapshot/2026-05/index.html">Report Details</a>
 <a class="button button-secondary" href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/0c42845b-8aa8-4fc0-ab1d-2c5654730137">Buy Report</a></div></div><figure class="report-card-preview"><picture><source media="(max-width: 640px)" srcset="/assets/report_previews/fitness_centers/bucuresti/40_reviews_distribution_mobile.png"><img src="/assets/report_previews/fitness_centers/bucuresti/40_reviews_distribution.png" alt="Distribution of fitness center profiles in Bucharest by Google review count" loading="lazy" decoding="async"></picture><figcaption class="report-card-caption">Observed profiles are concentrated in the 101–500 review range, while businesses with very high review volumes appear significantly less frequently across the market.</figcaption></figure></article></div></section>
 </main>
 <footer class="site-footer" data-render-section="footer">
@@ -72,6 +74,19 @@
 </footer>
 
 <script>
+(function () {
+  var header = document.querySelector(".site-header");
+  var toggle = document.querySelector(".site-nav-toggle");
+  if (!header || !toggle) {
+    return;
+  }
+
+  toggle.addEventListener("click", function () {
+    var isOpen = header.classList.toggle("is-nav-open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+})();
+</script><script>
 (function () {
   var filterRoot = document.querySelector("[data-report-filters]");
   var cards = document.querySelectorAll('section[data-block-type="report_library"] .report-card');

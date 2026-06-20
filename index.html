@@ -54,6 +54,19 @@
 <a class="button button-secondary" href="en/index.html">Continue in English</a></div></section>
 </main>
 <footer class="site-footer platform-entry-footer" data-render-section="footer"></footer>
+<script>
+(function () {
+  var header = document.querySelector(".site-header");
+  var toggle = document.querySelector(".site-nav-toggle");
+  if (!header || !toggle) {
+    return;
+  }
 
+  toggle.addEventListener("click", function () {
+    var isOpen = header.classList.toggle("is-nav-open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+})();
+</script>
 </body>
 </html>

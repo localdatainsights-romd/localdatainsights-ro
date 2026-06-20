@@ -31,11 +31,12 @@
 </head>
 <body class="product-page page-license">
 <header class="site-header" data-render-section="header">
+  <button class="site-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
   <a class="logo" href="../index.html" aria-label="Local Data Insights">
     <img src="/assets/logo.png" alt="" class="logo-icon">
     <span>Local Data Insights</span>
   </a>
-  <nav class="site-nav" aria-label="Primary navigation">
+  <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
     <a href="../index.html">Home</a>
     <a href="../markets/index.html">Markets</a>
     <a href="../datasets/index.html">Datasets</a>
@@ -54,12 +55,12 @@
 </section>
 
 <section class="section generic-block" data-block-type="general_terms"><h2>General Terms</h2><p>Products purchased from Local Data Insights may be used within your own business, organization or professional activities for analysis, research and internal decision-making. Unless otherwise specified by the applicable license, reports and datasets may not be resold, redistributed or published in their original or near-original form. Custom licensing options may be available for broader usage scenarios.</p></section>
-<section class="section generic-block" data-block-type="usage_scenarios"><h2>Common Usage Scenarios</h2><table class="usage-table"><thead><tr><th>Action</th><th>Status</th></tr></thead><tbody><tr><td>Internal business use</td><td>Allowed</td></tr>
+<section class="section generic-block" data-block-type="usage_scenarios"><h2>Common Usage Scenarios</h2><div class="table-scroll"><table class="usage-table"><thead><tr><th>Action</th><th>Status</th></tr></thead><tbody><tr><td>Internal business use</td><td>Allowed</td></tr>
 <tr><td>Client work</td><td>Allowed</td></tr>
 <tr><td>Presentations and reports</td><td>Allowed</td></tr>
 <tr><td>Quotes and excerpts</td><td>Limited</td></tr>
 <tr><td>Resale</td><td>Not Allowed</td></tr>
-<tr><td>Mass distribution</td><td>Not Allowed</td></tr></tbody></table></section>
+<tr><td>Mass distribution</td><td>Not Allowed</td></tr></tbody></table></div></section>
 <section class="section generic-block" data-block-type="contact_cta"><h2>Need a Different License?</h2><p>If your intended use falls outside the standard license, contact us to discuss custom licensing options.</p></section>
 </main>
 <footer class="site-footer" data-render-section="footer">
@@ -75,6 +76,19 @@
   </nav>
 </footer>
 
+<script>
+(function () {
+  var header = document.querySelector(".site-header");
+  var toggle = document.querySelector(".site-nav-toggle");
+  if (!header || !toggle) {
+    return;
+  }
 
+  toggle.addEventListener("click", function () {
+    var isOpen = header.classList.toggle("is-nav-open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+})();
+</script>
 </body>
 </html>

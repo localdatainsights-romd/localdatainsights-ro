@@ -31,11 +31,12 @@
 </head>
 <body class="product-page page-reports">
 <header class="site-header" data-render-section="header">
+  <button class="site-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
   <a class="logo" href="../index.html" aria-label="Local Data Insights">
     <img src="/assets/logo.png" alt="" class="logo-icon">
     <span>Local Data Insights</span>
   </a>
-  <nav class="site-nav" aria-label="Navigatie principala">
+  <nav class="site-nav" id="site-nav" aria-label="Navigatie principala">
     <a href="../index.html">Acasă</a>
     <a href="../markets/index.html">Piețe</a>
     <a href="../datasets/index.html">Seturi de date</a>
@@ -55,7 +56,8 @@
 
 <section class="section generic-block" data-block-type="report_library"><h2>Rapoarte disponibile</h2><div class="dataset-filter-controls" data-report-filters><label class="dataset-filter-control"><span>Piață</span><select data-filter-key="market"><option value="">Toate</option><option value="Centre de fitness">Centre de fitness</option></select></label>
 <label class="dataset-filter-control"><span>Geografie</span><select data-filter-key="geography"><option value="">Toate</option><option value="București">București</option></select></label>
-<label class="dataset-filter-control"><span>Data snapshotului</span><select data-filter-key="snapshot_date"><option value="">Toate</option><option value="Mai 2026">Mai 2026</option></select></label></div><div class="report-library"><article class="report-card" data-market="Centre de fitness" data-geography="București" data-snapshot_date="Mai 2026" data-report_type="market_snapshot"><div class="report-card-content"><h3>Fitness Market Snapshot în București</h3><p class="report-card-meta">București · Mai 2026</p><div class="report-card-stat"><span>Profiluri observate</span><strong>365</strong></div><p class="report-card-summary">Raport de tip market snapshot despre vizibilitatea pe Google Business, website-uri, programe de lucru, recenzii, ratinguri, categorii observate și companiile cu cea mai mare vizibilitate din segmentul fitness din București.</p><div class="report-card-actions"><a class="button" href="fitness-centers/romania/bucuresti/market-snapshot/2026-05/index.html">Detalii raport</a>
+<label class="dataset-filter-control"><span>Data snapshotului</span><select data-filter-key="snapshot_date"><option value="">Toate</option><option value="Mai 2026">Mai 2026</option></select></label></div><div class="report-library"><article class="report-card" data-market="Centre de fitness" data-geography="București" data-snapshot_date="Mai 2026" data-report_type="market_snapshot"><div class="report-card-content"><h3>Fitness Market Snapshot în București</h3><p class="report-card-meta">București · Mai 2026</p><div class="report-card-stat"><span>Profiluri observate</span><strong>353</strong></div><p class="report-card-summary">Raport de tip market snapshot despre vizibilitatea pe Google Business, website-uri, programe de lucru, recenzii și ratinguri.
+Include distribuția recenziilor, acoperirea digitală, categoriile observate și exemple de companii cu vizibilitate ridicată.</p><div class="report-card-actions"><a class="button" href="fitness-centers/romania/bucuresti/market-snapshot/2026-05/index.html">Detalii raport</a>
 <a class="button button-secondary" href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/0c42845b-8aa8-4fc0-ab1d-2c5654730137">Cumpără raportul</a></div></div><figure class="report-card-preview"><picture><source media="(max-width: 640px)" srcset="/assets/report_previews/fitness_centers/bucuresti/40_reviews_distribution_mobile.png"><img src="/assets/report_previews/fitness_centers/bucuresti/40_reviews_distribution.png" alt="Distribuția profilurilor de fitness din București după numărul de recenzii Google" loading="lazy" decoding="async"></picture><figcaption class="report-card-caption">Distribuția profilurilor observate este concentrată în intervalul 101–500 de recenzii, în timp ce segmentele cu volume foarte ridicate apar semnificativ mai rar.</figcaption></figure></article></div></section>
 </main>
 <footer class="site-footer" data-render-section="footer">
@@ -72,6 +74,19 @@
 </footer>
 
 <script>
+(function () {
+  var header = document.querySelector(".site-header");
+  var toggle = document.querySelector(".site-nav-toggle");
+  if (!header || !toggle) {
+    return;
+  }
+
+  toggle.addEventListener("click", function () {
+    var isOpen = header.classList.toggle("is-nav-open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+})();
+</script><script>
 (function () {
   var filterRoot = document.querySelector("[data-report-filters]");
   var cards = document.querySelectorAll('section[data-block-type="report_library"] .report-card');

@@ -31,11 +31,12 @@
 </head>
 <body class="product-page page-markets">
 <header class="site-header" data-render-section="header">
+  <button class="site-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
   <a class="logo" href="../index.html" aria-label="Local Data Insights">
     <img src="/assets/logo.png" alt="" class="logo-icon">
     <span>Local Data Insights</span>
   </a>
-  <nav class="site-nav" aria-label="Navigatie principala">
+  <nav class="site-nav" id="site-nav" aria-label="Navigatie principala">
     <a href="../index.html">Acasă</a>
     <a href="index.html" aria-current="page">Piețe</a>
     <a href="../datasets/index.html">Seturi de date</a>
@@ -70,12 +71,41 @@
 
 <script>
 (function () {
+  var header = document.querySelector(".site-header");
+  var toggle = document.querySelector(".site-nav-toggle");
+  if (!header || !toggle) {
+    return;
+  }
+
+  toggle.addEventListener("click", function () {
+    var isOpen = header.classList.toggle("is-nav-open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+})();
+</script><script>
+(function () {
   var roots = document.querySelectorAll('section[data-block-type="market_library"]');
   if (!roots.length) {
     return;
   }
 
   roots.forEach(function (root) {
+    root.addEventListener("click", function (event) {
+      var anchor = event.target.closest ? event.target.closest("summary a") : null;
+      if (!anchor || !root.contains(anchor)) {
+        return;
+      }
+
+      var summary = anchor.closest("summary");
+      var details = summary ? summary.parentElement : null;
+      if (!details || details.tagName !== "DETAILS") {
+        return;
+      }
+
+      event.preventDefault();
+      details.open = !details.open;
+    });
+
     root.addEventListener("toggle", function (event) {
       var details = event.target;
       if (!details || details.tagName !== "DETAILS" || details.open) {

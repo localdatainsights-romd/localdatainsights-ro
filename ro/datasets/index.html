@@ -31,11 +31,12 @@
 </head>
 <body class="product-page page-datasets">
 <header class="site-header" data-render-section="header">
+  <button class="site-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
   <a class="logo" href="../index.html" aria-label="Local Data Insights">
     <img src="/assets/logo.png" alt="" class="logo-icon">
     <span>Local Data Insights</span>
   </a>
-  <nav class="site-nav" aria-label="Navigatie principala">
+  <nav class="site-nav" id="site-nav" aria-label="Navigatie principala">
     <a href="../index.html">Acasă</a>
     <a href="../markets/index.html">Piețe</a>
     <a href="index.html" aria-current="page">Seturi de date</a>
@@ -55,13 +56,13 @@
 
 <section class="section generic-block" data-block-type="dataset_library"><h2>Biblioteca de seturi de date</h2><div class="dataset-filter-controls" data-dataset-filters><label class="dataset-filter-control"><span>Piață</span><select data-filter-key="market"><option value="">Toate</option><option value="Centre de fitness">Centre de fitness</option></select></label>
 <label class="dataset-filter-control"><span>Geografie</span><select data-filter-key="geography"><option value="">Toate</option><option value="România">România</option><option value="București">București</option><option value="Brașov">Brașov</option><option value="Cluj">Cluj</option><option value="Constanța">Constanța</option><option value="Iași">Iași</option><option value="Timiș">Timiș</option></select></label>
-<label class="dataset-filter-control"><span>Data snapshotului</span><select data-filter-key="snapshot_date"><option value="">Toate</option><option value="Mai 2026">Mai 2026</option></select></label></div><table class="usage-table"><thead><tr><th>Set de date</th><th>Geografie</th><th>Data snapshotului</th><th>Înregistrări</th><th>Acțiuni</th></tr></thead><tbody><tr data-market="Centre de fitness" data-geography="România" data-snapshot="Mai 2026"><td>Centre de fitness · România</td><td>România</td><td>Mai 2026</td><td>1389</td><td><a href="fitness/romania/index.html">Prezentare dataset</a> · <a href="/assets/samples/fitness_centers/romania/cards_sample_50.xlsx">Descarcă exemplul</a> · <a href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/f4f31d76-4f8f-4ed2-8e67-b645981bc7c3">Cumpără setul de date</a></td></tr>
-<tr data-market="Centre de fitness" data-geography="București" data-snapshot="Mai 2026"><td>Centre de fitness · București</td><td>București</td><td>Mai 2026</td><td>365</td><td><a href="fitness/romania/bucuresti/index.html">Prezentare dataset</a> · <a href="/assets/samples/fitness_centers/bucuresti/cards_sample_50.xlsx">Descarcă exemplul</a> · <a href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/a8bb11b9-f6dd-4638-a748-6c9a5401e356">Cumpără setul de date</a></td></tr>
-<tr data-market="Centre de fitness" data-geography="Brașov" data-snapshot="Mai 2026"><td>Centre de fitness · Brașov</td><td>Brașov</td><td>Mai 2026</td><td>95</td><td><a href="fitness/romania/brasov/index.html">Prezentare dataset</a> · <a href="/assets/samples/fitness_centers/brasov/cards_sample_50.xlsx">Descarcă exemplul</a> · <a href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/2410ab51-d59c-493c-a36b-70694ad1a3ba">Cumpără setul de date</a></td></tr>
-<tr data-market="Centre de fitness" data-geography="Cluj" data-snapshot="Mai 2026"><td>Centre de fitness · Cluj</td><td>Cluj</td><td>Mai 2026</td><td>150</td><td><a href="fitness/romania/cluj/index.html">Prezentare dataset</a> · <a href="/assets/samples/fitness_centers/cluj/cards_sample_50.xlsx">Descarcă exemplul</a> · <a href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/cd0a6a34-5215-4afd-9a9c-bb8be56d47ec">Cumpără setul de date</a></td></tr>
-<tr data-market="Centre de fitness" data-geography="Constanța" data-snapshot="Mai 2026"><td>Centre de fitness · Constanța</td><td>Constanța</td><td>Mai 2026</td><td>73</td><td><a href="fitness/romania/constanta/index.html">Prezentare dataset</a> · <a href="/assets/samples/fitness_centers/constanta/cards_sample_50.xlsx">Descarcă exemplul</a> · <a href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/fe4db0a3-57de-4da6-8b68-fc843cde9554">Cumpără setul de date</a></td></tr>
-<tr data-market="Centre de fitness" data-geography="Iași" data-snapshot="Mai 2026"><td>Centre de fitness · Iași</td><td>Iași</td><td>Mai 2026</td><td>90</td><td><a href="fitness/romania/iasi/index.html">Prezentare dataset</a> · <a href="/assets/samples/fitness_centers/iasi/cards_sample_50.xlsx">Descarcă exemplul</a> · <a href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/dbead74f-2f73-466f-a45d-2af65fd8e8b2">Cumpără setul de date</a></td></tr>
-<tr data-market="Centre de fitness" data-geography="Timiș" data-snapshot="Mai 2026"><td>Centre de fitness · Timiș</td><td>Timiș</td><td>Mai 2026</td><td>79</td><td><a href="fitness/romania/timis/index.html">Prezentare dataset</a> · <a href="/assets/samples/fitness_centers/timis/cards_sample_50.xlsx">Descarcă exemplul</a> · <a href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/4b8369b8-363f-4ea6-925b-040bd4fd29b4">Cumpără setul de date</a></td></tr></tbody></table></section>
+<label class="dataset-filter-control"><span>Data snapshotului</span><select data-filter-key="snapshot_date"><option value="">Toate</option><option value="Mai 2026">Mai 2026</option></select></label></div><div class="table-scroll"><table class="usage-table"><thead><tr><th>Set de date</th><th>Data snapshotului</th><th>Înregistrări</th><th>Acțiuni</th></tr></thead><tbody><tr data-market="Centre de fitness" data-geography="România" data-snapshot="Mai 2026"><td>Centre de fitness · România</td><td>Mai 2026</td><td>1312</td><td><a href="fitness/romania/index.html">Prezentare dataset</a> · <a href="/assets/samples/fitness_centers/romania/cards_sample_50.xlsx">Descarcă exemplul</a> · <a href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/f4f31d76-4f8f-4ed2-8e67-b645981bc7c3">Cumpără setul de date</a></td></tr>
+<tr data-market="Centre de fitness" data-geography="București" data-snapshot="Mai 2026"><td>Centre de fitness · București</td><td>Mai 2026</td><td>353</td><td><a href="fitness/romania/bucuresti/index.html">Prezentare dataset</a> · <a href="/assets/samples/fitness_centers/bucuresti/cards_sample_50.xlsx">Descarcă exemplul</a> · <a href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/a8bb11b9-f6dd-4638-a748-6c9a5401e356">Cumpără setul de date</a></td></tr>
+<tr data-market="Centre de fitness" data-geography="Brașov" data-snapshot="Mai 2026"><td>Centre de fitness · Brașov</td><td>Mai 2026</td><td>84</td><td><a href="fitness/romania/brasov/index.html">Prezentare dataset</a> · <a href="/assets/samples/fitness_centers/brasov/cards_sample_30.xlsx">Descarcă exemplul</a> · <a href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/2410ab51-d59c-493c-a36b-70694ad1a3ba">Cumpără setul de date</a></td></tr>
+<tr data-market="Centre de fitness" data-geography="Cluj" data-snapshot="Mai 2026"><td>Centre de fitness · Cluj</td><td>Mai 2026</td><td>141</td><td><a href="fitness/romania/cluj/index.html">Prezentare dataset</a> · <a href="/assets/samples/fitness_centers/cluj/cards_sample_50.xlsx">Descarcă exemplul</a> · <a href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/cd0a6a34-5215-4afd-9a9c-bb8be56d47ec">Cumpără setul de date</a></td></tr>
+<tr data-market="Centre de fitness" data-geography="Constanța" data-snapshot="Mai 2026"><td>Centre de fitness · Constanța</td><td>Mai 2026</td><td>70</td><td><a href="fitness/romania/constanta/index.html">Prezentare dataset</a> · <a href="/assets/samples/fitness_centers/constanta/cards_sample_30.xlsx">Descarcă exemplul</a> · <a href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/fe4db0a3-57de-4da6-8b68-fc843cde9554">Cumpără setul de date</a></td></tr>
+<tr data-market="Centre de fitness" data-geography="Iași" data-snapshot="Mai 2026"><td>Centre de fitness · Iași</td><td>Mai 2026</td><td>86</td><td><a href="fitness/romania/iasi/index.html">Prezentare dataset</a> · <a href="/assets/samples/fitness_centers/iasi/cards_sample_30.xlsx">Descarcă exemplul</a> · <a href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/dbead74f-2f73-466f-a45d-2af65fd8e8b2">Cumpără setul de date</a></td></tr>
+<tr data-market="Centre de fitness" data-geography="Timiș" data-snapshot="Mai 2026"><td>Centre de fitness · Timiș</td><td>Mai 2026</td><td>70</td><td><a href="fitness/romania/timis/index.html">Prezentare dataset</a> · <a href="/assets/samples/fitness_centers/timis/cards_sample_30.xlsx">Descarcă exemplul</a> · <a href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/4b8369b8-363f-4ea6-925b-040bd4fd29b4">Cumpără setul de date</a></td></tr></tbody></table></div></section>
 <!-- deferred:final_cta -->
 </main>
 <footer class="site-footer" data-render-section="footer">
@@ -78,6 +79,19 @@
 </footer>
 
 <script>
+(function () {
+  var header = document.querySelector(".site-header");
+  var toggle = document.querySelector(".site-nav-toggle");
+  if (!header || !toggle) {
+    return;
+  }
+
+  toggle.addEventListener("click", function () {
+    var isOpen = header.classList.toggle("is-nav-open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+})();
+</script><script>
 (function () {
   var filterRoot = document.querySelector("[data-dataset-filters]");
   var tableRows = document.querySelectorAll('section[data-block-type="dataset_library"] tbody tr');

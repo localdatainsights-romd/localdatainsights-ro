@@ -31,11 +31,12 @@
 </head>
 <body class="product-page page-l2_dataset_overview">
 <header class="site-header" data-render-section="header">
+  <button class="site-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
   <a class="logo" href="../../../../index.html" aria-label="Local Data Insights">
     <img src="/assets/logo.png" alt="" class="logo-icon">
     <span>Local Data Insights</span>
   </a>
-  <nav class="site-nav" aria-label="Primary navigation">
+  <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
     <a href="../../../../index.html">Home</a>
     <a href="../../../../markets/index.html">Markets</a>
     <a href="../../../index.html" aria-current="page">Datasets</a>
@@ -53,31 +54,39 @@
   <p class="hero-subtitle">This overview shows the fitness centers dataset for Constanta as of May 2026. It includes dataset structure, geographic coverage, record count and field coverage to help users assess whether the data fits their needs.</p>
 </section>
 
-<section class="section generic-block" data-block-type="dataset_snapshot"><h2>Dataset Snapshot</h2><div class="field-grid"><dl class="metric-grid"><div class="metric-item"><dt>Records</dt><dd>73</dd></div>
+<section class="section generic-block" data-block-type="dataset_snapshot"><h2>Dataset Snapshot</h2><div class="field-grid"><dl class="metric-grid"><div class="metric-item"><dt>Records</dt><dd>70</dd></div>
 <div class="metric-item"><dt>Snapshot</dt><dd>May 2026</dd></div>
 <div class="metric-item"><dt>Geography</dt><dd>Constanta</dd></div></dl></div></section>
-<section class="section generic-block" data-block-type="geography_coverage"><h2>Geography Coverage</h2><table class="usage-table"><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>Country</td><td>Romania</td></tr>
+<section class="section generic-block" data-block-type="included_categories"><h2>Included categories</h2><p>Categories reflect the public Google Maps / Google Business classifications observed for the profiles included in this dataset.</p><ul class="inline-list"><li>Sală de fitness</li></ul></section>
+<section class="section generic-block" data-block-type="geography_coverage"><h2>Geography Coverage</h2><div class="table-scroll"><table class="usage-table"><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody><tr><td>Country</td><td>Romania</td></tr>
 <tr><td>County</td><td>Constanta</td></tr>
 <tr><td>Dataset Coverage</td><td>3 market areas</td></tr>
-<tr><td>Records</td><td>73</td></tr></tbody></table><div class="generic-table-note coverage-note"><p>A market area refers to the commercial area represented in the dataset and may include the main city together with nearby localities associated with the observed market.</p></div><div class="included-markets"><h3>Included Markets</h3><ul class="inline-list"><li>Constanța</li>
+<tr><td>Records</td><td>70</td></tr></tbody></table></div><div class="generic-table-note coverage-note"><p>A market area refers to the commercial area represented in the dataset and may include the main city together with nearby localities associated with the observed market.</p></div><div class="included-markets"><h3>Included Markets</h3><ul class="inline-list"><li>Constanța</li>
 <li>Mangalia</li>
 <li>Năvodari</li></ul></div></section>
-<section class="section generic-block" data-block-type="dataset_fields_coverage"><h2>Available Fields &amp; Coverage</h2><table class="usage-table"><thead><tr><th>Field</th><th>Description</th><th>Coverage</th></tr></thead><tbody><tr><td>Business name</td><td>Business or place name as published in the dataset.</td><td>100.0%</td></tr>
+<section class="section generic-block" data-block-type="dataset_fields_coverage"><h2>Available Fields &amp; Coverage</h2><div class="table-scroll"><table class="usage-table"><thead><tr><th>Field</th><th>Description</th><th>Coverage</th></tr></thead><tbody><tr><td>Business name</td><td>Business or place name as published in the dataset.</td><td>100.0%</td></tr>
 <tr><td>Normalized category</td><td>Original category label normalized for analysis.</td><td>100.0%</td></tr>
 <tr><td>Physical address</td><td>Cleaned business address.</td><td>100.0%</td></tr>
-<tr><td>Website</td><td>Published business website where available.</td><td>38.36%</td></tr>
-<tr><td>Phone</td><td>Published phone number where available.</td><td>79.45%</td></tr>
-<tr><td>Email</td><td>Published email address where available.</td><td>15.07%</td></tr>
+<tr><td>Market area</td><td>Market area associated with the business or location.</td><td>100.0%</td></tr>
+<tr><td>County</td><td>County associated with the business or location.</td><td>100.0%</td></tr>
+<tr><td>Website</td><td>Published business website where available.</td><td>40.0%</td></tr>
+<tr><td>Phone</td><td>Published phone number where available.</td><td>80.0%</td></tr>
+<tr><td>Email</td><td>Published email address where available.</td><td>15.71%</td></tr>
 <tr><td>Map link</td><td>Google Maps URL for the business profile.</td><td>100.0%</td></tr>
-<tr><td>Working hours</td><td>Normalized working hours where available.</td><td>84.93%</td></tr>
-<tr><td>Rating</td><td>Google rating where available.</td><td>91.78%</td></tr>
-<tr><td>Reviews</td><td>Number of Google reviews where available.</td><td>91.78%</td></tr></tbody></table></section>
+<tr><td>Working hours</td><td>Normalized working hours where available.</td><td>85.71%</td></tr>
+<tr><td>Rating</td><td>Google rating where available.</td><td>91.43%</td></tr>
+<tr><td>Reviews</td><td>Number of Google reviews where available.</td><td>91.43%</td></tr>
+<tr><td>Facebook</td><td>Published Facebook profile where available.</td><td>27.14%</td></tr>
+<tr><td>Instagram</td><td>Published Instagram profile where available.</td><td>17.14%</td></tr>
+<tr><td>WhatsApp</td><td>Published WhatsApp contact where available.</td><td>2.86%</td></tr>
+<tr><td>YouTube</td><td>Published YouTube channel where available.</td><td>8.57%</td></tr>
+<tr><td>TikTok</td><td>Published TikTok profile where available.</td><td>8.57%</td></tr></tbody></table></div></section>
 <section class="section generic-block" data-block-type="dataset_use_cases"><h2>Why This Dataset Matters</h2><p>Instead of collecting business information manually, you can start with a structured market snapshot that already includes business details, location data, ratings, reviews and digital presence signals.</p><ul class="question-list"><li>Understand the structure of the market.</li>
 <li>Identify relevant businesses.</li>
 <li>Compare businesses using consistent market data.</li>
 <li>Analyze geographic distribution.</li>
 <li>Save time during research.</li></ul></section>
-<section class="section generic-block" data-block-type="sample_dataset"><h2>Sample Dataset</h2><p>Sample file available in XLSX formats.</p><dl class="metric-grid"><div class="metric-item"><dt>Format Label</dt><dd>XLSX</dd></div></dl><div class="block-actions"><a class="button" href="/assets/samples/fitness_centers/constanta/cards_sample_50.xlsx">Download Sample</a></div></section>
+<section class="section generic-block" data-block-type="sample_dataset"><h2>Sample Dataset</h2><p>Sample file available in XLSX formats.</p><div class="block-actions"><a class="button button-secondary" href="/assets/samples/fitness_centers/constanta/cards_sample_30.xlsx">Download Sample</a></div></section>
 <section class="section generic-block" data-block-type="final_cta"><div class="block-actions"><a class="button" href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/fe4db0a3-57de-4da6-8b68-fc843cde9554">Go to Store</a>
 <a class="button button-secondary" href="../../../../markets/fitness/romania/constanta/digital/index.html">Digital Coverage</a>
 <a class="button button-secondary" href="../../../../markets/fitness/romania/constanta/index.html">Market Leaders</a></div></section>
@@ -95,6 +104,19 @@
   </nav>
 </footer>
 
+<script>
+(function () {
+  var header = document.querySelector(".site-header");
+  var toggle = document.querySelector(".site-nav-toggle");
+  if (!header || !toggle) {
+    return;
+  }
 
+  toggle.addEventListener("click", function () {
+    var isOpen = header.classList.toggle("is-nav-open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+})();
+</script>
 </body>
 </html>

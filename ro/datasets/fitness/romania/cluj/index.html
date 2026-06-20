@@ -31,11 +31,12 @@
 </head>
 <body class="product-page page-l2_dataset_overview">
 <header class="site-header" data-render-section="header">
+  <button class="site-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
   <a class="logo" href="../../../../index.html" aria-label="Local Data Insights">
     <img src="/assets/logo.png" alt="" class="logo-icon">
     <span>Local Data Insights</span>
   </a>
-  <nav class="site-nav" aria-label="Navigatie principala">
+  <nav class="site-nav" id="site-nav" aria-label="Navigatie principala">
     <a href="../../../../index.html">Acasă</a>
     <a href="../../../../markets/index.html">Piețe</a>
     <a href="../../../index.html" aria-current="page">Seturi de date</a>
@@ -53,35 +54,44 @@
   <p class="hero-subtitle">Această prezentare arată datasetul centrelor de fitness din Cluj la nivelul lunii Mai 2026. Include structura datasetului, acoperirea geografică, numărul de înregistrări și gradul de completare al câmpurilor pentru a ajuta utilizatorii să evalueze dacă datele sunt potrivite pentru nevoile lor.</p>
 </section>
 
-<section class="section generic-block" data-block-type="dataset_snapshot"><h2>Dataset Snapshot</h2><div class="field-grid"><dl class="metric-grid"><div class="metric-item"><dt>Înregistrări</dt><dd>150</dd></div>
+<section class="section generic-block" data-block-type="dataset_snapshot"><h2>Dataset Snapshot</h2><div class="field-grid"><dl class="metric-grid"><div class="metric-item"><dt>Înregistrări</dt><dd>141</dd></div>
 <div class="metric-item"><dt>Snapshot</dt><dd>Mai 2026</dd></div>
 <div class="metric-item"><dt>Geografie</dt><dd>Cluj</dd></div></dl></div></section>
-<section class="section generic-block" data-block-type="geography_coverage"><h2>Geography Coverage</h2><table class="usage-table"><thead><tr><th>Câmp</th><th>Valoare</th></tr></thead><tbody><tr><td>Țară</td><td>România</td></tr>
+<section class="section generic-block" data-block-type="included_categories"><h2>Categorii incluse</h2><p>Categoriile reflectă clasificările publice observate pe Google Maps / Google Business pentru profilurile incluse în acest dataset.</p><ul class="inline-list"><li>Centru de gimnastică</li>
+<li>Sală de fitness</li></ul></section>
+<section class="section generic-block" data-block-type="geography_coverage"><h2>Acoperire geografică</h2><div class="table-scroll"><table class="usage-table"><thead><tr><th>Câmp</th><th>Valoare</th></tr></thead><tbody><tr><td>Țară</td><td>România</td></tr>
 <tr><td>Județ</td><td>Cluj</td></tr>
 <tr><td>Acoperire dataset</td><td>7 arii de piață</td></tr>
-<tr><td>Înregistrări</td><td>150</td></tr></tbody></table><div class="generic-table-note coverage-note"><p>O arie de piață se referă la zona comercială reprezentată în dataset și poate include orașul principal împreună cu localități apropiate asociate pieței observate.</p></div><div class="included-markets"><h3>Piețe incluse</h3><ul class="inline-list"><li>Baciu</li>
+<tr><td>Înregistrări</td><td>141</td></tr></tbody></table></div><div class="generic-table-note coverage-note"><p>O arie de piață se referă la zona comercială reprezentată în dataset și poate include orașul principal împreună cu localități apropiate asociate pieței observate.</p></div><div class="included-markets"><h3>Piețe incluse</h3><ul class="inline-list"><li>Baciu</li>
 <li>Câmpia Turzii</li>
 <li>Cluj-Napoca</li>
 <li>Dej</li>
 <li>Florești</li>
 <li>Gherla</li>
 <li>Turda</li></ul></div></section>
-<section class="section generic-block" data-block-type="dataset_fields_coverage"><h2>Câmpuri disponibile și acoperire</h2><table class="usage-table"><thead><tr><th>Câmp</th><th>Descriere</th><th>Acoperire</th></tr></thead><tbody><tr><td>Numele afacerii</td><td>Numele companiei sau al locației, publicat în setul de date.</td><td>100.0%</td></tr>
+<section class="section generic-block" data-block-type="dataset_fields_coverage"><h2>Câmpuri disponibile și acoperire</h2><div class="table-scroll"><table class="usage-table"><thead><tr><th>Câmp</th><th>Descriere</th><th>Acoperire</th></tr></thead><tbody><tr><td>Numele afacerii</td><td>Numele companiei sau al locației, publicat în setul de date.</td><td>100.0%</td></tr>
 <tr><td>Categorie normalizată</td><td>Categoria originală normalizată pentru analiză.</td><td>100.0%</td></tr>
 <tr><td>Adresă fizică</td><td>Adresa curățată a companiei sau locației.</td><td>100.0%</td></tr>
-<tr><td>Website</td><td>Website-ul publicat al companiei, dacă este disponibil.</td><td>58.0%</td></tr>
-<tr><td>Telefon</td><td>Număr sau numere de telefon publicate, dacă sunt disponibile.</td><td>89.33%</td></tr>
-<tr><td>Email</td><td>Adresă sau adrese de email publicate, dacă sunt disponibile.</td><td>32.67%</td></tr>
+<tr><td>Arie de piață</td><td>Aria de piață asociată companiei sau locației.</td><td>100.0%</td></tr>
+<tr><td>Județ</td><td>Județul asociat companiei sau locației.</td><td>100.0%</td></tr>
+<tr><td>Website</td><td>Website-ul publicat al companiei, dacă este disponibil.</td><td>57.45%</td></tr>
+<tr><td>Telefon</td><td>Număr sau numere de telefon publicate, dacă sunt disponibile.</td><td>89.36%</td></tr>
+<tr><td>Email</td><td>Adresă sau adrese de email publicate, dacă sunt disponibile.</td><td>32.62%</td></tr>
 <tr><td>Link direct către hartă</td><td>URL Google Maps pentru profilul companiei.</td><td>100.0%</td></tr>
-<tr><td>Program de lucru</td><td>Program de lucru normalizat din Google, dacă este disponibil.</td><td>84.0%</td></tr>
-<tr><td>Rating</td><td>Rating Google, dacă este disponibil.</td><td>98.67%</td></tr>
-<tr><td>Recenzii</td><td>Numărul de recenzii Google, dacă este disponibil.</td><td>98.67%</td></tr></tbody></table></section>
+<tr><td>Program de lucru</td><td>Program de lucru normalizat din Google, dacă este disponibil.</td><td>84.4%</td></tr>
+<tr><td>Rating</td><td>Rating Google, dacă este disponibil.</td><td>98.58%</td></tr>
+<tr><td>Recenzii</td><td>Numărul de recenzii Google, dacă este disponibil.</td><td>98.58%</td></tr>
+<tr><td>Facebook</td><td>Profilul Facebook publicat, dacă este disponibil.</td><td>38.3%</td></tr>
+<tr><td>Instagram</td><td>Profilul Instagram publicat, dacă este disponibil.</td><td>42.55%</td></tr>
+<tr><td>WhatsApp</td><td>Contactul WhatsApp publicat, dacă este disponibil.</td><td>2.84%</td></tr>
+<tr><td>YouTube</td><td>Canalul YouTube publicat, dacă este disponibil.</td><td>19.86%</td></tr>
+<tr><td>TikTok</td><td>Profilul TikTok publicat, dacă este disponibil.</td><td>16.31%</td></tr></tbody></table></div></section>
 <section class="section generic-block" data-block-type="dataset_use_cases"><h2>De ce este util acest set de date</h2><p>În loc să colectezi manual informații despre companii, poți porni de la un snapshot structurat al pieței care include deja date despre companii, localizare, ratinguri, recenzii și semnale de prezență digitală.</p><ul class="question-list"><li>Înțelege structura pieței.</li>
 <li>Identifică companii relevante.</li>
 <li>Compară companii și indicatori cheie.</li>
 <li>Analizează distribuția geografică.</li>
 <li>Economisește timp în procesul de cercetare.</li></ul></section>
-<section class="section generic-block" data-block-type="sample_dataset"><h2>Sample Dataset</h2><p>Fișier exemplu disponibil în format XLSX.</p><dl class="metric-grid"><div class="metric-item"><dt>Format Label</dt><dd>XLSX</dd></div></dl><div class="block-actions"><a class="button" href="/assets/samples/fitness_centers/cluj/cards_sample_50.xlsx">Descarcă exemplul</a></div></section>
+<section class="section generic-block" data-block-type="sample_dataset"><h2>Set de date exemplu</h2><p>Fișier exemplu disponibil în format XLSX.</p><div class="block-actions"><a class="button button-secondary" href="/assets/samples/fitness_centers/cluj/cards_sample_50.xlsx">Descarcă exemplul</a></div></section>
 <section class="section generic-block" data-block-type="final_cta"><div class="block-actions"><a class="button" href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/cd0a6a34-5215-4afd-9a9c-bb8be56d47ec">Mergi la magazin</a>
 <a class="button button-secondary" href="../../../../markets/fitness/romania/cluj/digital/index.html">Acoperire digitală</a>
 <a class="button button-secondary" href="../../../../markets/fitness/romania/cluj/index.html">Lideri de piață</a></div></section>
@@ -99,6 +109,19 @@
   </nav>
 </footer>
 
+<script>
+(function () {
+  var header = document.querySelector(".site-header");
+  var toggle = document.querySelector(".site-nav-toggle");
+  if (!header || !toggle) {
+    return;
+  }
 
+  toggle.addEventListener("click", function () {
+    var isOpen = header.classList.toggle("is-nav-open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+})();
+</script>
 </body>
 </html>

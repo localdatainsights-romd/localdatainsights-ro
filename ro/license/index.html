@@ -31,11 +31,12 @@
 </head>
 <body class="product-page page-license">
 <header class="site-header" data-render-section="header">
+  <button class="site-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
   <a class="logo" href="../index.html" aria-label="Local Data Insights">
     <img src="/assets/logo.png" alt="" class="logo-icon">
     <span>Local Data Insights</span>
   </a>
-  <nav class="site-nav" aria-label="Navigatie principala">
+  <nav class="site-nav" id="site-nav" aria-label="Navigatie principala">
     <a href="../index.html">Acasă</a>
     <a href="../markets/index.html">Piețe</a>
     <a href="../datasets/index.html">Seturi de date</a>
@@ -54,12 +55,12 @@
 </section>
 
 <section class="section generic-block" data-block-type="general_terms"><h2>General Terms</h2><p>Produsele achiziționate de la Local Data Insights pot fi utilizate în cadrul propriei companii, organizații sau activități profesionale pentru analiză, cercetare și luarea deciziilor interne. Cu excepția cazurilor prevăzute de licența aplicabilă, rapoartele și dataseturile nu pot fi revândute, redistribuite sau publicate în forma lor originală sau aproape originală. Pot fi disponibile opțiuni de licențiere personalizate pentru scenarii de utilizare extinse.</p></section>
-<section class="section generic-block" data-block-type="usage_scenarios"><h2>Scenarii comune de utilizare</h2><table class="usage-table"><thead><tr><th>Acțiune</th><th>Statut</th></tr></thead><tbody><tr><td>Utilizare internă în companie</td><td>Permis</td></tr>
+<section class="section generic-block" data-block-type="usage_scenarios"><h2>Scenarii comune de utilizare</h2><div class="table-scroll"><table class="usage-table"><thead><tr><th>Acțiune</th><th>Statut</th></tr></thead><tbody><tr><td>Utilizare internă în companie</td><td>Permis</td></tr>
 <tr><td>Activitate pentru clienți</td><td>Permis</td></tr>
 <tr><td>Prezentări și rapoarte</td><td>Permis</td></tr>
 <tr><td>Citate și fragmente</td><td>Limitat</td></tr>
 <tr><td>Revânzare</td><td>Nepermis</td></tr>
-<tr><td>Distribuire în masă</td><td>Nepermis</td></tr></tbody></table></section>
+<tr><td>Distribuire în masă</td><td>Nepermis</td></tr></tbody></table></div></section>
 <section class="section generic-block" data-block-type="contact_cta"><h2>Ai nevoie de o licență diferită?</h2><p>Dacă scenariul tău de utilizare depășește condițiile licenței standard, contactează-ne pentru a discuta opțiuni personalizate de licențiere.</p></section>
 </main>
 <footer class="site-footer" data-render-section="footer">
@@ -75,6 +76,19 @@
   </nav>
 </footer>
 
+<script>
+(function () {
+  var header = document.querySelector(".site-header");
+  var toggle = document.querySelector(".site-nav-toggle");
+  if (!header || !toggle) {
+    return;
+  }
 
+  toggle.addEventListener("click", function () {
+    var isOpen = header.classList.toggle("is-nav-open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+})();
+</script>
 </body>
 </html>
