@@ -136,6 +136,18 @@ a:hover {
   font-size: 18px;
 }
 
+.related-report-prompt {
+  margin: 12px 0 28px;
+}
+
+.related-report-heading {
+  margin: 0 0 6px;
+}
+
+.related-report-link {
+  margin: 0;
+}
+
 .section {
   border-top: 1px solid #eee;
   padding: 28px 0;
@@ -249,6 +261,11 @@ a:hover {
 .info-card-featured {
   border-color: #c9d8ea;
   background: #ffffff;
+}
+
+[data-block-type="market_preview"] .info-card-featured:hover,
+[data-block-type="market_preview"] .info-card-featured:focus-within {
+  border-color: #c9d8ea;
   box-shadow: 0 14px 34px rgba(31, 79, 138, 0.10);
 }
 
@@ -469,6 +486,161 @@ section[data-block-type="dataset_fields_coverage"] .usage-table td:nth-child(3) 
   margin: 16px 0 0;
 }
 
+.block-eyebrow {
+  margin: 0 0 8px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.insight-note {
+  max-width: 760px;
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  border-left: 3px solid #2563eb;
+  background: #f8fafc;
+  color: #334155;
+  line-height: 1.55;
+}
+
+section[data-block-type="working_hours_intensity"] .metric-grid,
+section[data-block-type="working_hours_intensity"] .usage-table {
+  max-width: 760px;
+}
+
+.research-preview-content {
+  margin-top: 24px;
+}
+
+section[data-block-type="research_preview"] .research-preview-content {
+  max-width: 900px;
+}
+
+section[data-block-type="research_preview"] .language-note {
+  max-width: 760px;
+  margin: 10px 0 0;
+  color: #5F5A55;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+section[data-block-type="research_preview"] .research-preview-panel {
+  margin: 0;
+  padding: 22px;
+  border: 1px solid #D8D3C8;
+  border-radius: 8px;
+  background: #FAFAF7;
+  color: #222222;
+}
+
+section[data-block-type="research_preview"] .research-preview-panel + .research-preview-panel {
+  margin-top: 16px;
+}
+
+section[data-block-type="research_preview"] .research-preview-panel .block-eyebrow {
+  color: #8A5A44;
+}
+
+section[data-block-type="research_preview"] .research-preview-panel p,
+section[data-block-type="research_preview"] .research-preview-panel td,
+section[data-block-type="research_preview"] .research-preview-panel th {
+  color: #5F5A55;
+}
+
+section[data-block-type="research_preview"] .research-preview-panel h2,
+section[data-block-type="research_preview"] .research-preview-panel strong {
+  color: #222222;
+}
+
+section[data-block-type="research_preview"] .research-preview-panel .metric-grid,
+section[data-block-type="research_preview"] .research-preview-panel .usage-table,
+section[data-block-type="research_preview"] .research-preview-panel .insight-note {
+  max-width: 760px;
+}
+
+.layout-metric-cards-editorial .block-eyebrow {
+  margin-bottom: 8px;
+  color: #8A5A44;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.layout-metric-cards-editorial h2 {
+  margin: 0 0 16px;
+  max-width: 760px;
+}
+
+.layout-metric-cards-editorial > p {
+  max-width: 760px;
+  color: #5F5A55;
+  line-height: 1.65;
+}
+
+.editorial-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 760px;
+  margin: 28px 0 0;
+}
+
+.editorial-metric-card {
+  min-width: 0;
+  padding: 14px 10px;
+  border: 1px solid #D8D3C8;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.45);
+  text-align: center;
+}
+
+.editorial-metric-value,
+.editorial-metric-label,
+.editorial-metric-unit {
+  display: block;
+}
+
+.editorial-metric-value {
+  color: #222222;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.editorial-metric-label {
+  margin-top: 7px;
+  color: #5F5A55;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.editorial-metric-unit {
+  margin-top: 4px;
+  color: #6F6A65;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.editorial-takeaway {
+  max-width: 760px;
+  margin-top: 28px;
+  padding-left: 14px;
+  border-left: 2px solid #D8B7A1;
+  color: #5F5A55;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+@media (max-width: 720px) {
+  .editorial-metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .generic-sections {
   max-width: 760px;
   margin: 22px 0 0;
@@ -548,6 +720,16 @@ section[data-block-type="dataset_fields_coverage"] .usage-table td:nth-child(3) 
   background: #fff;
 }
 
+.report-card:hover,
+.report-card:focus-within {
+  border-color: #c9d8ea;
+  box-shadow: 0 14px 34px rgba(31, 79, 138, 0.10);
+}
+
+.report-card[hidden] {
+  display: none !important;
+}
+
 .report-card-content {
   min-width: 0;
 }
@@ -604,13 +786,52 @@ section[data-block-type="dataset_fields_coverage"] .usage-table td:nth-child(3) 
 
 .report-card-caption {
   margin: 12px 0 0;
-  color: #4b5563;
+  color: #5F5A55;
   font-size: 13px;
   line-height: 1.45;
 }
 
 .report-card-preview {
   margin: 0;
+  border: 1px solid #D8D3C8;
+  border-radius: 8px;
+  padding: 10px;
+  background: #FAFAF7;
+}
+
+.report-card-preview-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.report-card-preview-link:hover,
+.report-card-preview-link:focus,
+.report-card-preview-link:focus-visible {
+  color: inherit;
+  text-decoration: none;
+}
+
+.report-card-preview-link *,
+.report-card-preview-link:hover *,
+.report-card-preview-link:focus-visible * {
+  text-decoration: none;
+}
+
+.report-card-preview-link:focus-visible {
+  outline: 3px solid rgba(138, 90, 68, 0.35);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.report-card-preview-link:hover .report-card-preview,
+.report-card-preview-link:hover .research-preview-compact-block {
+  border-color: #8A5A44;
+}
+
+.report-card-preview-link:focus-visible .report-card-preview,
+.report-card-preview-link:focus-visible .research-preview-compact-block {
+  border-color: #8A5A44;
 }
 
 .report-card-preview img {
@@ -618,8 +839,123 @@ section[data-block-type="dataset_fields_coverage"] .usage-table td:nth-child(3) 
   width: 100%;
   max-width: 100%;
   height: auto;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #D8D3C8;
+  border-radius: 6px;
+}
+
+.research-preview-content-compact {
+  margin: 0;
+}
+
+.research-preview-compact-block {
+  border: 1px solid #D8D3C8;
   border-radius: 8px;
+  padding: 16px;
+  background: #FAFAF7;
+}
+
+.research-preview-compact-eyebrow {
+  margin: 0 0 6px;
+  color: #8A5A44;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.research-preview-compact-block h4 {
+  margin: 0 0 8px;
+  color: #111111;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.research-preview-compact-block p:not(.research-preview-compact-eyebrow) {
+  margin: 0 0 14px;
+  color: #5F5A55;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.research-preview-compact-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.research-preview-compact-metric {
+  border: 1px solid #E1DED4;
+  border-radius: 8px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.research-preview-compact-metric:nth-child(3):last-child {
+  grid-column: 1 / -1;
+}
+
+.research-preview-compact-metric span {
+  display: block;
+  color: #5F5A55;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.research-preview-compact-metric strong {
+  display: block;
+  margin-top: 4px;
+  color: #222222;
+  font-size: 17px;
+  line-height: 1.15;
+}
+
+.research-preview-compact-metric strong span {
+  display: inline;
+  margin-left: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #5F5A55;
+}
+
+.research-preview-mini-bars {
+  display: grid;
+  gap: 10px;
+}
+
+.research-preview-mini-bar {
+  display: grid;
+  gap: 5px;
+}
+
+.research-preview-mini-bar-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  color: #5F5A55;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.research-preview-mini-bar-header strong {
+  flex: 0 0 auto;
+  color: #222222;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.research-preview-mini-bar-track {
+  height: 7px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #E1DED4;
+}
+
+.research-preview-mini-bar-fill {
+  display: block;
+  width: var(--bar-pct, 0%);
+  height: 100%;
+  border-radius: inherit;
+  background: #1F4F8A;
 }
 
 .report-card-actions {
